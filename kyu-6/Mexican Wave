@@ -1,0 +1,5 @@
+function wave(str, result = []){
+  str.split('')
+     .forEach((char, i) => char !== ' ' && result.push(str.slice(0, i) + str[i].toUpperCase() + str.slice(i+1)));
+  return result;
+}

@@ -1,0 +1,12 @@
+var encryptThis = function(text) {
+  // Implement me! :)
+  return text.split(' ')
+             .map( word => {
+               let tmp = word.charAt(1);
+               return word.charCodeAt(0) + word.replace(/^./i, '').split('')
+                               .map((c, i) => i === 0 ? word.split('').pop() : i === word.length-2 ? tmp: c)
+                               .join('');
+             
+             })            
+             .join(' ');
+}

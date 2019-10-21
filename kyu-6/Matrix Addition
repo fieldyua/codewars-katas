@@ -1,0 +1,3 @@
+function matrixAddition(a, b){
+  return a.map((row, i) => row.map((n, j) => n + b[i][j]));
+}

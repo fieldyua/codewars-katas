@@ -1,0 +1,4 @@
+function digPow(n, p){
+  let result = ('' + n).split('').reduce( (pow, n, i) => pow += Math.pow(n, i + p), 0);
+  return !((result / n) % 1) ? result / n : -1;
+}
